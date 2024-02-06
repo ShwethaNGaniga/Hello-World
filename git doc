@@ -1,0 +1,121 @@
+sh@iw-sn:~$ git --version
+git version 2.25.1
+sh@iw-sn:~$ git config --global user.name "Shwetha"
+sh@iw-sn:~$ git config --global user.email "sn@sparkcognition.com"
+sh@iw-sn:~$ mkdir projrct
+sh@iw-sn:~$ rm -r projrct/
+sh@iw-sn:~$ mkdir prorject
+sh@iw-sn:~$ cd prorject/
+sh@iw-sn:~/prorject$ git init 
+Initialized empty Git repository in /home/sh/prorject/.git/
+sh@iw-sn:~/prorject$ ls
+index.html
+sh@iw-sn:~/prorject$ git sttaus
+git: 'sttaus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+sh@iw-sn:~/prorject$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+sh@iw-sn:~/prorject$ git add index.html 
+sh@iw-sn:~/prorject$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   index.html
+
+sh@iw-sn:~/prorject$ git add --all
+sh@iw-sn:~/prorject$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+	new file:   bluestyle.css
+	new file:   index.html
+
+sh@iw-sn:~/prorject$ git add -A
+sh@iw-sn:~/prorject$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+	new file:   bluestyle.css
+	new file:   index.html
+
+sh@iw-sn:~/prorject$ git commit -m "First release of Hello World!"
+[master (root-commit) abe4844] First release of Hello World!
+ 3 files changed, 25 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 bluestyle.css
+ create mode 100644 index.html
+sh@iw-sn:~/prorject$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+sh@iw-sn:~/prorject$ git status --short
+ M index.html
+sh@iw-sn:~/prorject$ git commit -a -m "Updated index.html with a new line"
+[master bf3a271] Updated index.html with a new line
+ 1 file changed, 2 insertions(+)
+sh@iw-sn:~/prorject$ git log
+commit bf3a271222127ceea27ea76c2ee18d7f6b854cc6 (HEAD -> master)
+Author: Shwetha <sn@sparkcognition.com>
+Date:   Mon Feb 5 18:16:58 2024 +0530
+
+    Updated index.html with a new line
+
+commit abe484417a1ea55a3d0790bde8931873b72329ee
+Author: Shwetha <sn@sparkcognition.com>
+Date:   Mon Feb 5 18:14:16 2024 +0530
+
+    First release of Hello World!
+sh@iw-sn:~/prorject$ git hhelp --all
+git: 'hhelp' is not a git command. See 'git --help'.
+
+The most similar command is
+	help
+sh@iw-sn:~/prorject$ git help --all
+See 'git help <command>' to read about a specific subcommand
+
+Main Porcelain Commands
+   add                  Add file contents to the index
+   am                   Apply a series of patches from a mailbox
+   archive              Create an archive of files from a named tree
+   bisect               Use binary search to find the commit that introduced a bug
+   branch               List, create, or delete branches
+   bundle               Move objects and refs by archive
+   checkout             Switch branches or restore working tree files
+   cherry-pick          Apply the changes introduced by some existing commits
+   citool               Graphical alternative to git-commit
+   clean                Remove untracked files from the working tree
+
+
+
+			................................
+			
+sh@iw-sn:~/prorject$ git add --help
+
+			
+			
+
